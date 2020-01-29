@@ -1,12 +1,8 @@
 ====================
-Gaussian Density Model
+Veloview to PCD
 ====================
 
-Segmentation algorithm of urban environment, we used the LiDAR Velodyne 64E. The algorithm read and write type files csv.
-
-Input: cloud points (x,y,z,d) where d is density and (x,y,z) without density.
-
-Ouput: cloud points (x,y,z,d) objects segmentation.
+Descomprime Archivos obtenidos por Veloview, selecciona una muestra y los guarda en el formato Point Cloud Data PCD
 
 ==================
 
@@ -16,11 +12,12 @@ Required Modules:
 
   * PIP      
   * Numpy
-  * Math
+  * Getopt
   * Pandas
   * CSV
-  * Matplotlib
-  * Intertools
+  * Pypcd
+  * pprint
+  * Zipfile
 
 Installation:
 ==============================
@@ -31,24 +28,22 @@ Installation:
 
 ``$ pip install numpy``
 
-``$ pip install math``
-
 ``$ pip install pandas``
 
 ``$ pip install python-csv``
 
-``$ pip install matplotlib``
+``$ pip install pypcd``
 
-``$ pip install itertools-s``
+``$ pip3 install --upgrade git+https://github.com/klintan/pypcd.git``
 
-
+``$ pip install pprint``
 
 Example:
 ========
 
-``$ python GDM.py --help``
+``$ python Veloview-PCD.py --help``
 
-``$ python GDM.py -i iValue``
+``$ python Veloview-PCD.py -i iValue``
 
 
 Cite article (In review):
